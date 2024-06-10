@@ -13,4 +13,5 @@ int my_isneg(int nb)
     } else {
         write(1, "P", 1);
     }
+    return 0;
 }

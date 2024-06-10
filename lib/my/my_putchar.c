@@ -1,12 +1,14 @@
 /*
 ** EPITECH PROJECT, 2023
-** B-CPE-100-LYN-1-1-cpoolday07-alexis.drago-beltran
+** B-BOO-101-LYN-1-1-phoenixd03-alexis.drago-beltran
 ** File description:
 ** my_putchar.c
 */
-#include "../../include/my.h"
+
+#include <unistd.h>
+#include <stdio.h>
 
 void my_putchar(char c)
 {
-
+    write(1, &c, 1);
 }

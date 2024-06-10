@@ -6,9 +6,9 @@
 */
 
 #ifndef MY_HUNTER_H_
-#define MY_HUNTER_H_
+    #define MY_HUNTER_H_
 
-#include <SFML/Graphics.h>
+    #include <SFML/Graphics.h>
 
 typedef struct game_s {
     sfRenderWindow *window;
