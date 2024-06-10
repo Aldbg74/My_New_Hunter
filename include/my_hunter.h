@@ -11,5 +11,6 @@
 
 int do_the_window(void);
 int make_window(void);
+int make_kenny_true(void);
 
 #endif
