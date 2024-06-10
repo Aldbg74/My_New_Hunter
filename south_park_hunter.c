@@ -15,6 +15,5 @@
 int main(void)
 {
     make_window();
-    make_kenny_true();
     return 0;
 }

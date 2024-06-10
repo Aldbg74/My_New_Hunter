@@ -14,7 +14,5 @@
 
 int make_kenny_true(void)
 {
-    sfTexture *spriteTexture = sfTexture_createFromFile("src/params/KennyMcCormick.png", NULL);
-    sfSprite *sprite = sfSprite_create();
-    sfSprite_setTexture(sprite, spriteTexture, sfTrue);
+    return 0;
 }

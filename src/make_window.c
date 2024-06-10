@@ -18,7 +18,8 @@ int make_window(void)
     sfRenderWindow *window;
     sfEvent event;
 
-    window = sfRenderWindow_create(mode, "My_Hunter", sfResize | sfClose, NULL);
+    window =
+            sfRenderWindow_create(mode, "My_Hunter", sfResize | sfClose, NULL);
     if (!window)
         return 84;
     while (sfRenderWindow_isOpen(window)) {
