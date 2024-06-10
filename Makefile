@@ -6,6 +6,8 @@
 ##
 
 SRC	=	$(wildcard *.c)	\
+		$(wildcard src/*.c) \
+		$(wildcard lib/my/*.c) \
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -13,7 +15,7 @@ CC	=	gcc
 
 EXEC	=	My_Hunter
 
-CFLAGS	+=	-L./lib/my -lmy -g3 -lcsfml-graphics
+CFLAGS	+=	-L./lib/my -g3 -lcsfml-graphics
 
 all:	build	clean
 
