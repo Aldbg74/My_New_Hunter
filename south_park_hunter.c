@@ -15,12 +15,16 @@
 int main(void)
 {
     sfVideoMode mode = {1900, 1080, 32};
-    sfRenderWindow *window = sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
+    sfRenderWindow *window =
+            sfRenderWindow_create(mode, "South Park Hunt", sfClose);
+    sfTexture *backgroundTexture =
+            sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
+    sfTexture *spriteTexture =
+            sfTexture_createFromFile("src/params/KennyMcCormick.png", NULL);
+    sfSprite *backgroundSprite = sfSprite_create();
+
+    sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
     if (!window) {
         return 84;
     }
-    sfTexture *backgroundTexture = sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
-    sfSprite *backgroundSprite = sfSprite_create();
-    sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
-    sfTexture *spriteTexture = sfTexture_createFromFile("src/params/KennyMcCormick.png", NULL);
 }
