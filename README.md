@@ -12,8 +12,8 @@ As the people at epitech know, the project is corrected by the Moulinette, of wh
 <H1>🎮 How To Launch ? 🎮</H1>
 
 ```
-git clone the repo
-cd My_Hunter
+git clone git@github.com:Aldbg74/My_New_Hunter.git
+cd My_New_Hunter
 Make
 ./My_Hunter
 ```
