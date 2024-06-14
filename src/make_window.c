@@ -11,33 +11,33 @@
 #include <SFML/Window.h>
 #include <SFML/Audio.h>
 #include <SFML/System.h>
+#include <SFML/Graphics.h>
 
-int do_the_window2(void)
+sfVideoMode mode = {1900, 1080, 32};
+sfRenderWindow *window;
+sfTexture *backgroundTexture;
+sfSprite *backgroundSprite;
+
+void init_resources(void)
 {
-    sfVideoMode mode = {1900, 1080, 32};
-    sfRenderWindow *window =
-            sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
-    sfTexture *backgroundTexture =
+    window = sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
+    backgroundTexture =
             sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
-    sfSprite *backgroundSprite = sfSprite_create();
+    backgroundSprite = sfSprite_create();
+    sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
+}
 
+void destroy_resources(void)
+{
     sfSprite_destroy(backgroundSprite);
     sfTexture_destroy(backgroundTexture);
     sfRenderWindow_destroy(window);
-    return 0;
 }
 
-int do_the_window(void)
+void do_the_window(void)
 {
-    sfVideoMode mode = {1900, 1080, 32};
-    sfRenderWindow *window =
-            sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
-    sfTexture *backgroundTexture =
-            sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
-    sfSprite *backgroundSprite = sfSprite_create();
     sfEvent event;
 
-    sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
     while (sfRenderWindow_isOpen(window)) {
         while (sfRenderWindow_pollEvent(window, &event)) {
             if (event.type == sfEvtClosed) {
@@ -48,23 +48,15 @@ int do_the_window(void)
         sfRenderWindow_drawSprite(window, backgroundSprite, NULL);
         sfRenderWindow_display(window);
     }
-    do_the_window2();
-    return 0;
 }
 
 int make_window(void)
 {
-    sfVideoMode mode = {1900, 1080, 32};
-    sfRenderWindow *window =
-            sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
-    sfTexture *backgroundTexture =
-            sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
-    sfSprite *backgroundSprite = sfSprite_create();
-
-    sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
+    init_resources();
     if (!window) {
         return 84;
     }
     do_the_window();
+    destroy_resources();
     return 0;
 }

@@ -9,7 +9,7 @@
 #ifndef MY_HUNTER_H_
     #define MY_HUNTER_H_
 
-int do_the_window(void);
+void do_the_window(void);
 int make_window(void);
 int make_kenny_true(void);
 
