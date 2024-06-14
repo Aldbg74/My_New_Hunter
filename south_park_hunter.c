@@ -11,9 +11,9 @@
 #include <SFML/Window.h>
 #include <SFML/System.h>
 
-
 int main(void)
 {
+    make_menu();
     make_window();
     return 0;
 }

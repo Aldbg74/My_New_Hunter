@@ -11,7 +11,6 @@
 #include <SFML/Window.h>
 #include <SFML/Audio.h>
 #include <SFML/System.h>
-#include "../include/struct.h"
 
 int make_menu(void)
 {
