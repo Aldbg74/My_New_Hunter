@@ -35,10 +35,10 @@ int do_the_window(void)
     sfTexture *backgroundTexture =
             sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
     sfSprite *backgroundSprite = sfSprite_create();
+    sfEvent event;
 
     sfSprite_setTexture(backgroundSprite, backgroundTexture, sfTrue);
     while (sfRenderWindow_isOpen(window)) {
-        sfEvent event;
         while (sfRenderWindow_pollEvent(window, &event)) {
             if (event.type == sfEvtClosed) {
                 sfRenderWindow_close(window);
