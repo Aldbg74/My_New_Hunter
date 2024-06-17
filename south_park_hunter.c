@@ -13,7 +13,7 @@
 
 int main(void)
 {
-    make_menu();
     make_window();
+    make_kenny_true();
     return 0;
 }

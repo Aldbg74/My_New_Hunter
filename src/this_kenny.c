@@ -14,5 +14,18 @@
 
 int make_kenny_true(void)
 {
+    sfSprite *kennySprite;
+    sfTexture *kennyTexture;
+    sfVector2f kennyPosition = {0, 0};
+
+    kennyTexture = sfTexture_createFromFile("params/KennyMcCormick.png", NULL);
+    if (!kennyTexture) {
+        return 84;
+    }
+    kennySprite = sfSprite_create();
+    sfSprite_setTexture(kennySprite, kennyTexture, sfTrue);
+    sfSprite_setPosition(kennySprite, kennyPosition);
+    sfRenderWindow_drawSprite(window, kennySprite, NULL);
+
     return 0;
 }
