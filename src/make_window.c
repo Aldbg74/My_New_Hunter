@@ -12,7 +12,12 @@
 #include <SFML/Audio.h>
 #include <SFML/System.h>
 #include <SFML/Graphics.h>
-#include "../include/struct.h"
+
+sfVideoMode mode = {1900, 1080, 32};
+sfRenderWindow *window;
+sfTexture *backgroundTexture;
+sfSprite *backgroundSprite;
+
 
 void init_resources(void)
 {
