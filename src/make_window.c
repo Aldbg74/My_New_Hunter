@@ -18,7 +18,6 @@ sfRenderWindow *window;
 sfTexture *backgroundTexture;
 sfSprite *backgroundSprite;
 
-
 void init_resources(void)
 {
     window = sfRenderWindow_create(mode, "South Park Hunt", sfClose, NULL);
