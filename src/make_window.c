@@ -35,19 +35,26 @@ void destroy_resources(void)
     sfRenderWindow_destroy(window);
 }
 
+void still_do_window(void)
+{
+    sfEvent event;
+
+    while (sfRenderWindow_pollEvent(window, &event)) {
+        if (event.type == sfEvtClosed) {
+            sfRenderWindow_close(window);
+        }
+    }
+    sfRenderWindow_clear(window, sfBlack);
+    sfRenderWindow_drawSprite(window, backgroundSprite, NULL);
+    sfRenderWindow_display(window);
+}
+
 void do_the_window(void)
 {
     sfEvent event;
 
     while (sfRenderWindow_isOpen(window)) {
-        while (sfRenderWindow_pollEvent(window, &event)) {
-            if (event.type == sfEvtClosed) {
-                sfRenderWindow_close(window);
-            }
-        }
-        sfRenderWindow_clear(window, sfBlack);
-        sfRenderWindow_drawSprite(window, backgroundSprite, NULL);
-        sfRenderWindow_display(window);
+        still_do_window();
     }
 }
 
