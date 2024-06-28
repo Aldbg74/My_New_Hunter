@@ -13,6 +13,7 @@ struct window
 {
     int width;
     int height;
+    int bitsPerPixel;
 };
 
 struct kenny
@@ -20,6 +21,8 @@ struct kenny
     int speed;
     int sprite;
 };
+
+
 
 void do_the_window(void);
 int make_window(void);
