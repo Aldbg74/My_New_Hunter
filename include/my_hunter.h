@@ -9,6 +9,18 @@
 #ifndef MY_HUNTER_H_
     #define MY_HUNTER_H_
 
+struct window
+{
+    int width;
+    int height;
+};
+
+struct kenny
+{
+    int speed;
+    int sprite;
+};
+
 void do_the_window(void);
 int make_window(void);
 int make_kenny_true(void);

@@ -13,6 +13,7 @@
 #include <SFML/System.h>
 #include <SFML/Graphics.h>
 
+
 sfVideoMode mode = {1900, 1080, 32};
 sfRenderWindow *window;
 sfTexture *backgroundTexture;
