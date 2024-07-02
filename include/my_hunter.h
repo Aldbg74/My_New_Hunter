@@ -9,18 +9,18 @@
 #ifndef MY_HUNTER_H_
     #define MY_HUNTER_H_
 
-struct window
+typedef struct window
 {
     int width;
     int height;
     int bitsPerPixel;
-};
+}str_window;
 
-struct kenny
+typedef struct kenny
 {
     int speed;
     int sprite;
-};
+}str_kenny;
 
 void do_the_window(void);
 int make_window(void);

@@ -13,7 +13,7 @@
 #include <SFML/System.h>
 #include <SFML/Graphics.h>
 
-/*
+
 int make_kenny_true(void)
 {
     sfSprite *kennySprite;
@@ -31,4 +31,3 @@ int make_kenny_true(void)
     sfTexture_destroy(kennyTexture);
     return 0;
 }
- */
