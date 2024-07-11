@@ -8,12 +8,16 @@
 #pragma once
 #ifndef MY_HUNTER_H_
     #define MY_HUNTER_H_
-
-#include <SFML/Graphics.h>
+    #include <SFML/Graphics.h>
+    #include <SFML/Graphics.h>
 
 typedef struct {
     sfVideoMode mode;
-} WindowMode;
+} Window_Mode;
+
+typedef struct {
+    sfTexture* texture;
+} TextureData;
 
 void do_the_window(void);
 int make_window(void);
