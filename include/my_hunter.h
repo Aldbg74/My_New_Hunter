@@ -11,13 +11,13 @@
     #include <SFML/Graphics.h>
     #include <SFML/Graphics.h>
 
-typedef struct {
+typedef struct window {
     sfVideoMode mode;
-} Window_Mode;
+}window_mode_t;
 
-typedef struct {
+typedef struct texture {
     sfTexture* texture;
-} TextureData;
+}texture_data_t;
 
 void do_the_window(void);
 int make_window(void);
