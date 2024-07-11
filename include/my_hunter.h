@@ -9,6 +9,12 @@
 #ifndef MY_HUNTER_H_
     #define MY_HUNTER_H_
 
+#include <SFML/Graphics.h>
+
+typedef struct {
+    sfVideoMode mode;
+} WindowMode;
+
 void do_the_window(void);
 int make_window(void);
 int make_kenny_true(void);
