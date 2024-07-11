@@ -12,7 +12,7 @@
 #include <SFML/Audio.h>
 #include <SFML/System.h>
 #include <SFML/Graphics.h>
-
+#include "../include/my_hunter.h"
 
 sfVideoMode mode = {1900, 1080, 32};
 sfRenderWindow *window;
