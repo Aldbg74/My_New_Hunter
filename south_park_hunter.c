@@ -44,7 +44,7 @@ static sfRenderWindow *create_window(window_mode_t *window_mode)
     return (window);
 }
 
-int main(void)
+int do_window(void)
 {
     window_mode_t window_mode = {{1900, 1080, 32}};
     texture_data_t texture_data;
@@ -54,7 +54,7 @@ int main(void)
 
     window = create_window(&window_mode);
     texture_data.texture =
-        sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
+            sfTexture_createFromFile("src/params/BUS_STOP.jpg", NULL);
     sprite = create_sprite(&texture_data);
     while (sfRenderWindow_isOpen(window)) {
         handle_events(window, &event);
@@ -64,4 +64,12 @@ int main(void)
     sfTexture_destroy(texture_data.texture);
     sfRenderWindow_destroy(window);
     return (0);
+}
+
+int main(void)
+{
+    if (sfTrue) {
+        do_window();
+    }
+    return 0;
 }

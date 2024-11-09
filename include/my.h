@@ -5,9 +5,11 @@
 ** my.h
 */
 
-#pragma once
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef _MY_H_
+    #define _MY_H_
+
+    #include <unistd.h>
+    #include <stdlib.h>
 
 void my_putchar(char c);
 int my_isneg(int nb);
@@ -43,3 +45,5 @@ int my_compute_factorial_it(int nb);
 int my_compute_power_it(int nb, int p);
 int my_sterlen(char const *str);
 char *my_revstr(char *dest, char const *src);
+
+#endif
