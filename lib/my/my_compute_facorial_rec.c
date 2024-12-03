@@ -1,9 +1,10 @@
 /*
-** EPITECH PROJECT, 2023
-** B-CPE-100-LYN-1-1-cpoolday05-alexis.drago-beltran
+** EPITECH PROJECT, 2024
+** B-CPE-101-LYN-1-1-myprintf-alexis.drago-beltran
 ** File description:
 ** my_compute_facorial_rec.c
 */
+
 #include "../../include/my.h"
 
 int my_compute_factorial_rec(int nb)
