@@ -5,10 +5,6 @@ This is my 2nd My_Hunter, made in my 2nd Tek1
 <H1>🎯 GOALS 🎯</H1>
 The objective of the project was to recreate a Duck Hunt game using C and CSFML/SFML <br>
 
-<H1>🤖 MOULINETTE RESULT 🤖</H1>
-As the people at epitech know, the project is corrected by the Moulinette, of which here are the results : <br>
-<br>
-
 <H1>🎮 How To Launch ? 🎮</H1>
 
 ```
